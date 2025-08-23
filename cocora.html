@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lugares Turisticos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header>
+    <h1>Lugares Turisticos</h1>
+    <a href="index.html">Volver al inicio</a>
+  </header>
+
+  <body>
+    <main>
+      <div class="turis-grid">
+        <div class="turis-item">
+          <img src="cocora.jpg" alt="Lugar cocora" />
+          <button
+            onclick="document.getElementById('detalles').classList.toggle('show')"
+          >
+            Ver Detalles
+          </button>
+
+          <h2>COCORA</h2>
+          <p><strong>Ciudad:Barranquilla</strong></p>
+          <p><strong>Categoría:Zona Turistica</strong></p>
+          <p><strong>AbiertO:8P.M-6P.M.</strong></p>
+          <p><strong>Parqueaderos:No hay</strong></p>
+          <p><strong>Precio de Entrada Actual:1000 pesos</strong></p>
+          <div class="mapa">
+            <button
+              onclick="window.open('https://www.google.com/maps?q=10.9639,-74.7964', '_blank')"
+            >
+              Ver en Google Maps
+            </button>
+            <iframe
+              width="100%"
+              height="300"
+              style="border: 0"
+              loading="lazy"
+              allowfullscreen
+              src="https://maps.app.goo.gl/QS7ENSBiSvmDekew7"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

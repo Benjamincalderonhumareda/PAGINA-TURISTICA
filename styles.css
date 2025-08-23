@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* Fondo degradado playero: arena → mar → cielo */
+  background: linear-gradient(to bottom, #fff8e1 0%, #39ebd3 40%, #afece2 100%);
+  min-height: 100vh;
+}
+
+/* ====== Encabezado ====== */
+header {
+  background: #b0dbf1; /* azul mar */
+  color: rgb(28, 37, 46);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* ====== Grid de lugares ====== */
+.turis-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Desktop: 4 columnas */
+@media (min-width: 769px) {
+  .turis-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Móviles: 1 columna */
+@media (max-width: 768px) {
+  .turis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====== Ítems (sin tarjeta ni sombra) ====== */
+.turis-item {
+  text-align: center;
+}
+
+/* ====== Imágenes (limpias) ====== */
+.turis-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 0; /* sin bordes redondeados */
+  transition: transform 0.3s ease;
+}
+
+.mapa {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mapa button {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.mapa button:hover {
+  background: #023e8a;
+  transform: scale(1.05);
+}
+
+.mapa iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
